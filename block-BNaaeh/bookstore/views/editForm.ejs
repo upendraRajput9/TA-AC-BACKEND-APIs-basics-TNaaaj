@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form action="/api/books/<%=book._id%>/edit" method="POST">
+        <input type="text" name="title" value="<%=book.title%>" placeholder="Title">
+        <textarea name="summary"  cols="30" rows="5" placeholder="Summary"><%=book.summary%></textarea>
+        <input type="number" name="pages" value="<%=book.pages%>" placeholder="Pages">
+        <input type="text" name="publication" value="<%=book.publication%>" placeholder="Publication">
+        <input type="url" name="cover_image" value="<%=book.cover_image%>" placeholder="Image_url">
+        <input type="text" name="category" value="<%=book.category%>" placeholder="Category">
+        <input type="submit">
+        </form>
+    </section>
+</body>
+</html>

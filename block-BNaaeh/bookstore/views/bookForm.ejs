@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><%if(!newBOOK){%>
+    <section>
+        <form action="/api/books/" method="POST">
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="summary"  cols="30" rows="5" placeholder="Summary"></textarea>
+        <input type="number" name="pages" placeholder="Pages">
+        <input type="text" name="publication" placeholder="Publication">
+        <input type="url" name="cover_image" placeholder="Image_url">
+        <input type="text" name="category" placeholder="Category">
+        <input type="submit">
+        </form>
+    </section>
+    <%}else if(newBOOK){%>
+    <section>
+        <form action="/api/newBooks/" method="POST">
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="summary"  cols="30" rows="5" placeholder="Summary"></textarea>
+        <input type="number" name="pages" placeholder="Pages">
+        <input type="text" name="publication" placeholder="Publication">
+        <input type="url" name="cover_image" placeholder="Image_url">
+        <input type="text" name="category" placeholder="Category">
+        <input type="submit">
+        </form>
+    </section>
+<%}%>
+</body>
+</html>
